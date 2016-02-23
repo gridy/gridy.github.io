@@ -1,2 +1,2 @@
-# gridy.github.io
+# Gridy.
 Grid script
