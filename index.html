@@ -12,11 +12,26 @@
 </head>
 
 <body>
-	<header class="center">
+	<header class="kolbig center">
 		<h1 class="text-center titulo">Gridy.
 		<hr id="lineindex">
 		</h1>
 	</header>
+	<section class="kolbig center_second" id="form">
+		<form>
+			<label class="texto" for="ncol">Number of columns</label>
+			<input class="forminput titulo" id="ncol" type="number" placeholder="example:2">
+			<label class="texto" for="tcont">Content type</label>
+			<select class="forminput titulo" id="tcont">
+				<option>Text</option>
+				<option>Images</option>
+			</select>
+			<label class="texto" for="nelement">Amount of elements</label>
+			<input class="forminput titulo" id="nelement" type="number" placeholder="example:2">
+			<br>
+			<b class="titulo butn butn-classic">Create grid</b>
+		</form>
+	</section>
 	<script src="js/modernizr-2.8.3.min.js"></script>
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script>
@@ -24,6 +39,18 @@
 			setTimeout(function () {
 				$("#lineindex").css("width", "100%")
 			}, 500);
+			setTimeout(function () {
+				$(".center").css("opacity", "0")
+			}, 1500);
+			setTimeout(function () {
+				$(".center").css("display", "none")
+			}, 1810);
+			setTimeout(function () {
+				$("#form").css("display", "block")
+			}, 2010);
+			setTimeout(function () {
+				$("#form").css("opacity", "1")
+			}, 2200);
 		});
 	</script>
 </body>
