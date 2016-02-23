@@ -19,21 +19,22 @@
 	</header>
 	<section class="kolbig center_second" id="form">
 		<form>
-			<label class="texto" for="ncol">Number of columns</label>
-			<input class="forminput titulo" id="ncol" type="number" placeholder="example:2">
+			<label class="texto" for="ncol">Number of columns (2-8)</label>
+			<input class="forminput titulo" id="ncol" type="number" placeholder="example:2" min="2" max="8" value="2">
 			<label class="texto" for="tcont">Content type</label>
 			<select class="forminput titulo" id="tcont">
-				<option>Text</option>
-				<option>Images</option>
+				<option value="text">Text</option>
+				<option value="img">Images</option>
 			</select>
-			<label class="texto" for="nelement">Amount of elements</label>
-			<input class="forminput titulo" id="nelement" type="number" placeholder="example:2">
+			<label class="texto" for="nelement">Amount of elements (2-20)</label>
+			<input class="forminput titulo" id="nelement" type="number" placeholder="example:2" min="2" max="20" value="2">
 			<br>
-			<b class="titulo butn butn-classic">Create grid</b>
+			<b class="titulo butn butn-classic text-center" onclick="creategrid();">Create grid</b>
 		</form>
 	</section>
 	<script src="js/modernizr-2.8.3.min.js"></script>
 	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/js.js"></script>
 	<script>
 		$(document).ready(function () {
 			setTimeout(function () {
