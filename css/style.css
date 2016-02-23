@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/*
+Robyt Framework
+Author: Hector Arce de las Heras
+Web: hectorarce.es
+*/
+
+@font-face {
+	font-family: font_titulo;
+	src: url(fonts/primary.otf);
+}
+
+@font-face {
+	font-family: font_texto;
+	src: url(fonts/text.ttf);
+}
+
+body {
+	text-rendering: optimizeLegibility;
+}
+
+hr {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.titulo {
+	font-family: font_titulo !important;
+}
+
+.texto {
+	font-family: font_texto !important;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 150px;
+	margin-left: -75px;
+	height: 80px;
+	margin-top: -40px;
+	padding: 5px;
+	transition: 0.5s;
+}
+
+header h1 {
+	font-size: 50px;
+	margin-top: 0px;
+}
+
+#lineindex {
+	margin-top: 10px;
+	background-color: #F5BB0A;
+	height: 4px;
+	width: 0%;
+	border: 0px;
+	margin-bottom: 0px;
+	transition: 1.2s;
+}
