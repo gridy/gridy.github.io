@@ -99,9 +99,29 @@ header h1 {
 	transition: 0.4s;
 }
 
+#contentbut{
+	text-align: center;
+	display: block;
+	position: relative;
+	top: 25px;
+	margin-bottom: 60px;
+}
+
 #line {
 	border: 0px;
-	height: 2px;
+	height: 1px;
 	background-color: #F5BB0A;
 	padding: 0px;
+	display: block;
+}
+
+#another{
+	cursor: pointer;
+	font-weight: lighter !important;
+}
+
+#down{
+	cursor: pointer;
+	margin-left: 40px;
+	font-weight: lighter !important;
 }

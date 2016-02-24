@@ -28,7 +28,7 @@ function creategrid() {
 	numerocolumnas = document.getElementById("ncol").value;
 	tipocontenido = document.getElementById("tcont").value;
 	cantidadelementos = document.getElementById("nelement").value;
-	newgrid = "<h1 class='titulo text-center'>Your gridy is ready!</h1><hr class='kol-3 centerkol' id='line'><div class='koltable-" + numerocolumnas + "'>";
+	newgrid = "<h1 class='titulo text-center'>Your gridy is ready!</h1><p id='contentbut'><b class='butn butn-classic titulo' id='another' onclick='another();'>Another gridy</b><b class='butn butn-classic titulo' id='down'>Download gridy</b></p><hr class='kol-1 centerkol' id='line'><div class='koltable-" + numerocolumnas + "'>";
 	if (tipocontenido == "text") {
 		for (i = 0; i < cantidadelementos; i++) {
 			aleatorio = Math.floor((Math.random() * 4) + 1);
@@ -55,4 +55,8 @@ function creategrid() {
 	setTimeout(function () {
 		$("#showgrid").css("opacity", "1")
 	}, 1300);
+}
+
+function another(){
+	window.location="http://gridy.github.io/";
 }
