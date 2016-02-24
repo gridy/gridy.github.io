@@ -51,8 +51,8 @@ hr {
 	left: 50%;
 	width: 420px;
 	margin-left: -210px;
-	height: 340px;
-	margin-top: -170px;
+	height: 430px;
+	margin-top: -215px;
 	padding: 5px;
 	transition: 0.5s;
 }
@@ -78,6 +78,20 @@ header h1 {
 	transition: 0.5s;
 }
 
+#form h1 {
+	margin-bottom: 35px;
+}
+
+#form h1:after {
+	content: '';
+	display: block;
+	background: #F5BB0A;
+	height: 20px;
+	max-width: 109px;
+	width: 100%;
+	margin: -13px auto;
+}
+
 #form label {
 	padding: 0px;
 	margin-bottom: 5px;
@@ -99,7 +113,7 @@ header h1 {
 	transition: 0.4s;
 }
 
-#contentbut{
+#contentbut {
 	text-align: center;
 	display: block;
 	position: relative;
@@ -113,15 +127,32 @@ header h1 {
 	background-color: #F5BB0A;
 	padding: 0px;
 	display: block;
+	margin-bottom: 35px !important;
 }
 
-#another{
+#another {
 	cursor: pointer;
 	font-weight: lighter !important;
 }
 
-#down{
+#down {
 	cursor: pointer;
 	margin-left: 40px;
 	font-weight: lighter !important;
+}
+
+#titlefinal {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#titlefinal:after {
+	content: '';
+	display: block;
+	background: #F5BB0A;
+	height: 20px;
+	max-width: 369px;
+	width: 100%;
+	margin: -13px auto;
+	margin-bottom: 20px;
 }

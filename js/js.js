@@ -29,7 +29,7 @@ function creategrid() {
 	numerocolumnas = document.getElementById("ncol").value;
 	tipocontenido = document.getElementById("tcont").value;
 	cantidadelementos = document.getElementById("nelement").value;
-	newgrid = "<h1 class='titulo text-center'>Your gridy is ready!</h1><p id='contentbut'><b class='butn butn-classic titulo' id='another' onclick='another();'>Another gridy</b><b class='butn butn-classic titulo' id='down' onclick='down();'>Download gridy</b></p><hr class='kol-1 centerkol' id='line'><div class='koltable-" + numerocolumnas + "'>";
+	newgrid = "<h1 class='titulo text-center' id='titlefinal'>Your gridy is ready!</h1><p id='contentbut'><b class='butn butn-classic titulo' id='another' onclick='another();'>Another gridy</b><b class='butn butn-classic titulo' id='down' onclick='down();'>Download gridy</b></p><hr class='kol-1 centerkol' id='line'><div class='koltable-" + numerocolumnas + "'>";
 	gridtohtml="<div class='koltable-" + numerocolumnas + "'>"
 	if (tipocontenido == "text") {
 		for (i = 0; i < cantidadelementos; i++) {
