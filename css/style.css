@@ -46,15 +46,15 @@ hr {
 }
 
 .center_second {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 420px;
-    margin-left: -210px;
-    height: 340px;
-    margin-top: -170px;
-    padding: 5px;
-    transition: 0.5s;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 420px;
+	margin-left: -210px;
+	height: 340px;
+	margin-top: -170px;
+	padding: 5px;
+	transition: 0.5s;
 }
 
 header h1 {
@@ -72,24 +72,36 @@ header h1 {
 	transition: 1.2s;
 }
 
-#form{
+#form {
 	display: none;
 	opacity: 0;
-	transition:0.5s;
+	transition: 0.5s;
 }
 
-#form label{
+#form label {
 	padding: 0px;
 	margin-bottom: 5px;
 	font-size: 16px;
 }
 
-#form .butn{
+#form .butn {
 	display: block;
 	width: 100%;
 }
 
-#form .forminput{
-	
-margin-bottom: 20px;
+#form .forminput {
+	margin-bottom: 20px;
+}
+
+#showgrid {
+	display: none;
+	opacity: 0;
+	transition: 0.4s;
+}
+
+#line {
+	border: 0px;
+	height: 2px;
+	background-color: #F5BB0A;
+	padding: 0px;
 }
