@@ -23,22 +23,26 @@ var imagenes = [img1, img2, img3, img4, img5, img6];
 /*****************************/
 var aleatorio;
 var newgrid = "";
+var gridtohtml = "";
 
 function creategrid() {
 	numerocolumnas = document.getElementById("ncol").value;
 	tipocontenido = document.getElementById("tcont").value;
 	cantidadelementos = document.getElementById("nelement").value;
-	newgrid = "<h1 class='titulo text-center'>Your gridy is ready!</h1><p id='contentbut'><b class='butn butn-classic titulo' id='another' onclick='another();'>Another gridy</b><b class='butn butn-classic titulo' id='down'>Download gridy</b></p><hr class='kol-1 centerkol' id='line'><div class='koltable-" + numerocolumnas + "'>";
+	newgrid = "<h1 class='titulo text-center'>Your gridy is ready!</h1><p id='contentbut'><b class='butn butn-classic titulo' id='another' onclick='another();'>Another gridy</b><b class='butn butn-classic titulo' id='down' onclick='down();'>Download gridy</b></p><hr class='kol-1 centerkol' id='line'><div class='koltable-" + numerocolumnas + "'>";
+	gridtohtml="<div class='koltable-" + numerocolumnas + "'>"
 	if (tipocontenido == "text") {
 		for (i = 0; i < cantidadelementos; i++) {
 			aleatorio = Math.floor((Math.random() * 4) + 1);
 			newgrid += "<article class='contable'><div class='koltable-cnt'><p class='texto'>" + textos[aleatorio] + "</p></div></article>";
+			gridtohtml += "<article class='contable'><div class='koltable-cnt'><p class='texto'>" + textos[aleatorio] + "</p></div></article>";
 		}
 	}
 	if (tipocontenido == "img") {
 		for (i = 0; i < cantidadelementos; i++) {
 			aleatorio = Math.floor((Math.random() * 5) + 1);
-			newgrid += "<article class='contable'><div class='koltable-cnt'><img src="+imagenes[aleatorio]+"></div></article>";
+			newgrid += "<article class='contable'><div class='koltable-cnt'><img src="+imagenes[aleatorio]+" alt='your image here'></div></article>";
+			gridtohtml += "<article class='contable'><div class='koltable-cnt'><img src="+imagenes[aleatorio]+" alt='your image here'></div></article>";
 		}
 	}
 	newgrid += "</div>";
@@ -59,4 +63,27 @@ function creategrid() {
 
 function another(){
 	window.location="http://gridy.github.io/";
+}
+
+function download(filename, text) {
+    var pom = document.createElement('a');
+    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    pom.setAttribute('download', filename);
+
+    if (document.createEvent) {
+        var event = document.createEvent('MouseEvents');
+        event.initEvent('click', true, true);
+        pom.dispatchEvent(event);
+    }
+    else {
+        pom.click();
+    }
+}
+
+function down(){
+	var htmlfinal = "";
+	htmlfinal = '<html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" type="text/css" href="http://robytframework.16mb.com/css/normalize.min.css" media="screen" /><link rel="stylesheet" type="text/css" href="http://robytframework.16mb.com/css/robyt2.0.css" media="screen" /><title>You gridy.</title></head><body>';
+	htmlfinal += gridtohtml;
+	htmlfinal += '</div></body></html>';
+	download('yourgridy.html', htmlfinal);
 }
